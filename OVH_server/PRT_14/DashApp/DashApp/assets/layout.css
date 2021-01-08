@@ -1,0 +1,156 @@
+/* https://grid.layoutit.com/?id=SGzfLEq */
+/* .grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 0.3fr 2.2fr 1fr 0.2fr 1fr 1fr 1fr;
+  grid-template-rows: 1.4fr 0.1fr 1.4fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Recent-Measure Recent-Measure Recent-Measure . Hourly-Measure Hourly-Measure Hourly-Measure Hourly-Measure Hourly-Measure Hourly-Measure"
+    ". . . . . . . . . ."
+    "Daily-Energy Daily-Energy Daily-Energy Daily-Energy Daily-Energy Daily-Energy . Monthly-Energy Monthly-Energy Monthly-Energy";
+}
+.Recent-Measure { grid-area: Recent-Measure; }
+.Hourly-Measure {
+  display: grid;
+  grid-template-columns: 1.8fr 0.1fr 1.4fr;
+  grid-template-rows: 0.2fr 1.8fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "date-selector date-selector date-selector"
+    "hourly-plot hourly-plot hourly-plot";
+  grid-area: Hourly-Measure;
+}
+.date-selector { grid-area: date-selector; }
+.hourly-plot { grid-area: hourly-plot; }
+.Daily-Energy { grid-area: Daily-Energy; }
+.Monthly-Energy {
+  display: grid;
+  grid-template-columns: 1.6fr 0.1fr 1.3fr;
+  grid-template-rows: 0.3fr 1.7fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". . ."
+    ". . .";
+  grid-area: Monthly-Energy;
+} */
+
+
+.grid-container {
+  display: flex;
+  flex-flow: column;
+  /* justify-content: space-between;
+  align-content: space-between; */
+  /* padding: 5px; */
+}
+
+.power-dash {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.power-dash > div {
+  margin: 1%;
+}
+
+.energy-dash {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.energy-dash > div {
+  margin: 1%;
+}
+
+/* .grid-container > div{
+  margin: 1%;
+} */
+
+.Recent-Measure {
+  order: 1;
+  flex: 1 3;
+}
+
+.Hourly-Measure {
+  order: 2;
+  flex: 2 1;
+}
+
+.Daily-Energy {
+  order: 3;
+  flex: 2 1;
+}
+
+.Monthly-Energy {
+  order: 4;
+  flex: 1 3;
+}
+/* ========== end layout */
+
+.Daily-Energy{
+  background-color: white;
+  border:1px solid white;
+  border-radius: 5px;
+  box-shadow:2px 2px darkgrey;  
+}
+
+.Hourly-Measure{
+  background-color: white;
+  border:1px solid white;
+  border-radius: 5px;
+  box-shadow:2px 2px darkgrey; 
+}
+
+.Monthly-Energy{
+  background-color: white;
+  border:1px solid white;
+  border-radius: 5px;
+  box-shadow:2px 2px darkgrey;  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.Recent-Measure{
+  background-color: white;
+  border:1px solid white;
+  border-radius: 5px;
+  box-shadow:2px 2px darkgrey;  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.big-number {
+  font-size: 70px;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+#recent-measure-time {
+  text-align: center;
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#daily-energy-plot {
+  width: 95%;
+  margin: 0 auto;
+}
+
+#hourly-plot {
+  width: 95%;
+  margin: 0 auto;
+}
+
+body {
+  background-color: #F2F2F2;
+  margin-right: 3%;
+  margin-left: 3%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
